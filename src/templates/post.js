@@ -29,7 +29,7 @@ const StyledPostContent = styled.div`
   p {
     margin: 1em 0;
     line-height: 1.5;
-    color: var(--light-slate);
+    color: var(--medium-brown);
   }
 
   a {

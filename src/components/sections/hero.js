@@ -3,25 +3,31 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { MdEmail, MdDownload } from 'react-icons/md';
+import { Typewriter } from 'react-simple-typewriter';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 100vh;
-  height: 100vh;
-  padding: 0;
+  justify-content: flex-start; /* centers vertically */
+  margin-left: 0;
+
+  .content {
+    width: 85%;
+    padding-right: 1rem;
+  }
 
   @media (max-height: 700px) and (min-width: 700px), (max-width: 360px) {
     height: auto;
-    padding-top: var(--nav-height);
   }
 
   h1 {
     margin: 0 0 30px 4px;
     color: var(--green);
     font-family: var(--font-mono);
-    font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+    font-size: clamp(var(--fz-md), 6vw, var(--fz-xl));
     font-weight: 400;
 
     @media (max-width: 480px) {
@@ -40,10 +46,30 @@ const StyledHeroSection = styled.section`
     max-width: 540px;
   }
 
-  .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+  .button-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+
+  .btn {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 30px;
+    padding: 1rem 1.75rem;
+    font-size: var(--fz-sm);
+    font-family: var(--font-mono);
+    text-decoration: none;
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      background-color: var(--green-tint);
+      outline: none;
+      }
+    }
   }
+
 `;
 
 const Hero = () => {
@@ -59,36 +85,57 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const one = <h1>👋 Hi, I'm </h1>;
+  const two = <h2 className="big-heading">Kelly Xu!</h2>;
+  const three = (
+  <h3 className="big-heading">
+    I’m a{' '}
+    <span style={{ color: 'var(--green)' }}>
+      <Typewriter
+        words={['Software Developer', 'Student', 'Creative']}
+        loop={0} // 0 = infinite
+        cursor
+        cursorStyle="|"
+        typeSpeed={80}
+        deleteSpeed={50}
+        delaySpeed={1500}
+      />
+    </span>
+  </h3>
+  );
+  //add stuff later if want to
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+       
       </p>
     </>
   );
+
+  //add buttons for email & resume 
+  const emailUser = "22kellyx";
+  const emailDomain = "gmail.com";
+  const email = `${emailUser}@${emailDomain}`;
+
   const five = (
-    <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
-      target="_blank"
-      rel="noreferrer">
-      Check out my course!
-    </a>
+    <div className="button-group">
+      <a className="btn" href={`mailto:${email}`} style={{ display: 'flex', alignItems: 'center' }}>
+        <MdEmail style={{ marginRight: '8px' }} />
+        Email
+      </a>
+      <a className="btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+        <MdDownload style={{ marginRight: '8px' }} />
+        Resume
+      </a>
+    </div>
   );
+
 
   const items = [one, two, three, four, five];
 
   return (
     <StyledHeroSection>
+      <div className="content">
       {prefersReducedMotion ? (
         <>
           {items.map((item, i) => (
@@ -105,6 +152,7 @@ const Hero = () => {
             ))}
         </TransitionGroup>
       )}
+      </div>
     </StyledHeroSection>
   );
 };

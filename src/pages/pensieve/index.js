@@ -110,12 +110,12 @@ const StyledPost = styled.li`
   }
 
   .post__desc {
-    color: var(--light-slate);
+    color: var(--medium-brown);
     font-size: 17px;
   }
 
   .post__date {
-    color: var(--light-slate);
+    color: var(--medium-brown);
     font-family: var(--font-mono);
     font-size: var(--fz-xxs);
     text-transform: uppercase;

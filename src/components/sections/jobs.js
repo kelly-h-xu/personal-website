@@ -158,7 +158,7 @@ const StyledTabPanel = styled.div`
 
   .range {
     margin-bottom: 25px;
-    color: var(--light-slate);
+    color: var(--medium-brown);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
   }
