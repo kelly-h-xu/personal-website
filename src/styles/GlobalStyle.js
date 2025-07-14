@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   ::selection {
     background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
+    color: var(--orange);
   }
 
   /* Provide basic, default focus styles.*/
@@ -165,7 +165,7 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     margin: 0 0 10px 0;
     font-weight: 600;
-    color: var(--lightest-slate);
+    color: var(--orange);
     line-height: 1.1;
   }
 

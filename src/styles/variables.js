@@ -4,13 +4,13 @@ const variables = css`
   :root {
     --dark-navy: #020c1b;
     --cream: #ffffed;
-    --light-navy: #91d1ccff;;
+    --light-navy: #cee8e5ff;;
     --lightest-navy: #233554;
     --navy-shadow: rgba(2, 12, 27, 0.7);
     --dark-slate: #4b371c;
     --slate: #2e2110ff;
     --medium-brown: #4b371c;
-    --lightest-slate: #ffb347;
+    --orange: #ec9a26ff;
     --white: #e6f1ff;
     --green: #40B5AD;
     --green-tint: rgba(100, 255, 218, 0.1);

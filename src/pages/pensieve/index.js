@@ -90,7 +90,7 @@ const StyledPost = styled.li`
 
   .post__title {
     margin: 0 0 10px;
-    color: var(--lightest-slate);
+    color: var(--orange);
     font-size: var(--fz-xxl);
 
     a {

@@ -21,12 +21,11 @@ const StyledTabList = styled.div`
   list-style: none;
 
   @media (max-width: 600px) {
-    display: flex;
     overflow-x: auto;
-    width: calc(100% + 100px);
-    padding-left: 50px;
-    margin-left: -50px;
-    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0;
   }
   @media (max-width: 480px) {
     width: calc(100% + 50px);
@@ -42,13 +41,15 @@ const StyledTabButton = styled.button`
   width: 100%;
   height: var(--tab-height, 40px);
   padding: 0 20px 2px;
-  border-left: 2px solid var(--lightest-navy, #ccd6f6);
+  border-left: 2px solid var(--lightest-navy, #4b371c);
   background-color: transparent;
-  color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
+  color: ${({ isActive }) => (isActive ? 'var(--orange)' : 'var(--slate)')};
   font-family: var(--font-mono, monospace);
   font-size: var(--fz-md, 14px);
   text-align: left;
-  white-space: nowrap;
+  white-space: normal; /* <-- allow wrapping */
+  word-break: break-word;
+
 
   @media (max-width: 768px) {
     padding: 0 15px 2px;
@@ -64,7 +65,7 @@ const StyledTabButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: var(--light-navy, #112240);
+    background-color: var(--light-navy, #8192b0ff);
   }
 `;
 
@@ -107,6 +108,8 @@ const StyledTabPanel = styled.div`
   width: 100%;
   height: auto;
   padding: 10px 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   h3 {
     font-size: var(--fz-xl, 20px);

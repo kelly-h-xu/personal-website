@@ -124,32 +124,40 @@ const StyledProject = styled.li`
   }
 
   .project-title {
-    color: var(--lightest-slate);
-    font-size: clamp(24px, 5vw, 28px);
+  color: var(--orange);
+  font-size: clamp(24px, 5vw, 28px);
+  position: relative;
+  z-index: 3;
 
-    @media (min-width: 768px) {
-      margin: 0 0 20px;
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--green); /* Your defined green hover color */
     }
+  }
 
-    @media (max-width: 768px) {
-      color: var(--white);
+  @media (min-width: 768px) {
+    margin: 0 0 20px;
+  }
 
-      a {
-        position: static;
+  @media (max-width: 768px) {
+    color: var(--white); /* Override base orange on small screens */
 
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          z-index: 0;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-        }
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: var(--green);
       }
     }
   }
+}
+
 
   .project-description {
     ${({ theme }) => theme.mixins.boxShadow};

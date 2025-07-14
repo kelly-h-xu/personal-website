@@ -71,7 +71,7 @@ const StyledProject = styled.li`
     height: 100%;
     padding: 2rem 1.75rem;
     border-radius: var(--border-radius);
-    background-color: var(--light-navy);
+    background-color: var(--orange);
     transition: var(--transition);
     overflow: auto;
   }
@@ -115,25 +115,26 @@ const StyledProject = styled.li`
   }
 
   .project-title {
-    margin: 0 0 10px;
-    color: var(--lightest-slate);
-    font-size: var(--fz-xxl);
+  position: relative;
+  z-index: 2; /* Ensure it's above the thumbnail */
+  margin: 0 0 10px;
+  font-size: var(--fz-xxl);
+  color: var(--orange);
+  transition: color 0.3s ease;
 
-    a {
-      position: static;
+  a {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    z-index: 2;
 
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
+    &:hover,
+    &:focus {
+      color: var(--light-orange); /* pick a light variant of your brand orange */
     }
   }
+}
+
 
   .project-description {
     color: var(--medium-brown);
