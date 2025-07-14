@@ -1,3 +1,4 @@
+//MOVE THIS BACK INTO SRC/PAGES WHEN WANT TO ADD THIS INTO THE SITE
 // import React, { useRef, useEffect } from 'react';
 // import { graphql } from 'gatsby';
 // import PropTypes from 'prop-types';

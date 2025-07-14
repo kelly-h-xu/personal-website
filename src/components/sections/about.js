@@ -33,14 +33,14 @@ const StyledText = styled.div`
       margin-bottom: 10px;
       padding-left: 20px;
       font-family: var(--font-mono);
-      font-size: var(--fz-xs);
+      font-size: var(--fz-md);
 
       &:before {
         content: '▹';
         position: absolute;
         left: 0;
         color: var(--green);
-        font-size: var(--fz-sm);
+        font-size: var(--fz-md, 24px);
         line-height: 12px;
       }
     }
@@ -136,7 +136,7 @@ const About = () => {
           <div>
             <p>
                Hi! I’m Kelly, a senior at Duke University (Class of 2026), majoring in Computer Science with a focus on 
-               Software Systems. I’m passionate about building technology that makes a real difference—whether that’s improving education, modernizing legacy systems, or crafting seamless user experiences. 
+               Software Systems. 
             </p>
 
             <p>

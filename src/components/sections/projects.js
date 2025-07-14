@@ -192,7 +192,7 @@ const Projects = () => {
 
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
-  const revealArchiveLink = useRef(null);
+  // const revealArchiveLink = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -202,7 +202,7 @@ const Projects = () => {
     }
 
     sr.reveal(revealTitle.current, srConfig());
-    sr.reveal(revealArchiveLink.current, srConfig());
+    // sr.reveal(revealArchiveLink.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
@@ -267,9 +267,9 @@ const Projects = () => {
     <StyledProjectsSection>
       <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
+      {/* <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
-      </Link>
+      </Link> */}
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (
