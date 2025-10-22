@@ -129,6 +129,10 @@ const leadershipData = [
     description: ["Frontend development and UI/UX design for Irex, a beginner-friendly SQL debugger"]
   },
   {
+    name: "HackDuke",
+    description: ["Developer on the Tech Team ('25 - present)"]
+  },
+  {
       name: "Duke Applied Machine Learning",
       description: ["Co-director ('24-'25)", "Oversaw Hardware, Software, and Data Science divisions for a student organization of >200 people.", "Contrary to the name of the organization, I didn't touch any machine learning (was in the software engineering division)."]
   },
@@ -149,19 +153,28 @@ const relevantCourseworkData = [
     name: "COMPSCI 330: Design and Analysis of Algorithms"
   },
   {
+    name: "COMPSCI 201: Data Structures and Algorithms"
+  },
+  {
     name: "COMPSCI 356: Computer Network Architecture"
   },
   {
-    name: "COMPSCI 316: Intro to Database Systems"
+    name: "COMPSCI 316: Database Systems"
   },
   {
-    name: "COMPSCI 290: Intro to Applied Machine Learning"
+    name: "COMPSCI 510: Operating Systems"
   },
   {
     name: "COMPSCI 250: Computer Architecture"
   },
   {
-    name: "COMPSCI 290: Server-Side Web Applications"
+    name: "COMPSCI 290: Web Development"
+  },
+  {
+    name: "COMPSCI 370: Machine Learning"
+  },
+  {
+    name: "COMPSCI 290: Applied Machine Learning"
   },
   {
     name: "COMPSCI 230: Discrete Math"
@@ -174,9 +187,6 @@ const relevantCourseworkData = [
   },
   {
     name: "STA 230: Probability"
-  },
-  {
-    name: "COMPSCI 201: Data Structures and Algorithms"
   },
   {
     name: "MATH 218: Linear Algebra"

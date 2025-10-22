@@ -133,7 +133,7 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hi! I’m Kelly, a senior at Duke University (Class of 2026), majoring in Computer
+              Hi! I’m Kelly, a student at Duke University, majoring in Computer
               Science with a focus on Software Systems.
             </p>
 

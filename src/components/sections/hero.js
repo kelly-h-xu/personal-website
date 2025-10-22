@@ -123,10 +123,10 @@ const Hero = () => {
         <MdEmail style={{ marginRight: '8px' }} />
         Email
       </a>
-      <a className="btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+      {/* <a className="btn" href="/resume.pdf" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
         <MdDownload style={{ marginRight: '8px' }} />
         Resume
-      </a>
+      </a> */}
     </div>
   );
 
